@@ -15,11 +15,11 @@ module Watermark
           $(window).ready(function() {
             if (typeof watermark !== 'undefined') {
               watermark.create({
-                content: '#{User.current.name} #{User.current.id}}',
-                secretContent: '#{User.current.id} #{format_date(Time.current)}', // 可选，暗水印内容，不填默认使用content
-                mode: 'light', // 可选，切换只使用暗水印模式
+                content: '#{User.current.name} #{User.current.id}',
+                secretContent: '#{User.current.id} #{format_date(Time.current)}',
+                mode: 'light', 
                 customText: '#{Setting.plugin_redmine_watermark['watermark_custom_text']}',
-                fontColorWhite: false, // 可选，字体颜色, 如果界面是深色主题，使用固定值true
+                fontColorWhite: false,
               });
             }
           });
